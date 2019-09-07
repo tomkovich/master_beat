@@ -63,6 +63,17 @@ li {
 	list-style: none;
 }
 
+.button-shop {
+	a {
+		font-weight: 700;
+		transition: color .25s ease-in-out, background-color .25s ease-in-out;
+		&:hover {
+			color: $white;
+			background-color: $lightBlue;
+		}
+	}
+}
+
 .menu {
 	ul {
 		margin: 0;
@@ -342,6 +353,76 @@ li {
 						color: #999;
 					}
 				}
+			}
+		}
+	}
+}
+
+/* Section Review */
+.section-review {
+	padding: 60px 4em 60px 0;
+	color: #fff;
+	background-color: #000;
+	.flex-container {
+		align-items: center;
+		.section-review_image {
+			width: 50%;
+			text-align: center;
+			position: relative;
+			img {
+				width: 60%;
+			}
+			.point {
+				width: 15px;
+				height: 15px;
+				position: absolute;
+				border-radius: 50%;
+				border: 1px solid $lightBlue;
+				cursor: pointer;
+				&:before {
+					display: block;
+					top: 2px;
+					left: 2px;
+					position: absolute;
+					content: '';
+					width: 9px;
+					background-color: $lightBlue;
+					height: 9px;
+					border-radius: 50%;
+				}
+				.point_text {
+					position: absolute;
+					margin-left: 30px;
+					color: #000;
+					background-color: #fff;
+					padding: 10px 20px;
+					text-align: center;
+					display: none;
+					min-width: 170px;
+				}
+				&.point_one {
+					transform: translateX(-50%);
+					right: 50%;
+					top: 40px;
+				}
+				&.point_two {
+					right: 45%;
+					bottom: 150px;
+				}
+			}
+		}
+		.section-review_content {
+			width: 50%;
+			text-align: right;
+			.title {
+				font-size: 21px;
+				font-weight: 700;
+				margin-bottom: 30px;
+			}
+			.description {
+				color: #cacaca;
+				line-height: 1.4em;
+				margin-bottom: 50px;
 			}
 		}
 	}

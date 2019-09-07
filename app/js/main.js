@@ -39,3 +39,33 @@ arrowNext.addEventListener('click', function() {
 arrowPrev.addEventListener('click', function() { 
 	beforeSliding(0); 
 });
+
+var points = document.querySelectorAll('.section-review_image .point');
+var title = document.querySelector('.section-review_content .title').textContent;
+
+points.forEach(function(point) {
+
+	point.addEventListener('click', function(e) {	
+		var btnPoint = e.target;
+		var text = btnPoint.firstElementChild;
+
+		if(text.style.display == 'block') {
+			text.style.display = 'none';
+		} else {
+			text.style.display = 'block';
+		}
+
+		btnPoint.classList.forEach(function(class) {
+			if(class == 'point_one') {
+				console.log(btnPoint.firstElementChild);
+				text.textContent = 'Сделано из настоящей кожи!';		
+			} else if(class == 'point_two') {
+				text.textContent = 'Полный комфорт прослушивания. Наушники с саморегулирующейся головной стяжкой и мягкими чашками, которые плотно ложатся на всю поверхность уха.';
+			} else {
+				text.textContent = title;
+			}
+		});
+
+	});
+
+});
