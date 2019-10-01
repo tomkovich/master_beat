@@ -5,6 +5,7 @@ watch 					= require('gulp-watch'),
 autoprefixer 			= require('gulp-autoprefixer'),
 uglify 					= require('gulp-uglify'),
 sourcemaps 			   = require('gulp-sourcemaps'),
+babel 					= require('gulp-babel'),
 sass 					   = require('gulp-sass'),
 cleanCSS 				= require('gulp-clean-css'),
 minifycss    		   = require('uglifycss'),
@@ -65,7 +66,10 @@ gulp.task('html:build', function () {
 
 gulp.task('js:build', function () {
 	return gulp.src(path.app.js)
-	.pipe(sourcemaps.init()) 
+	.pipe(sourcemaps.init())
+	.pipe(babel({
+		presets: ['@babel/env']
+	})) 
 	.pipe(uglify()) 
 	.pipe(sourcemaps.write()) 
 	.pipe(gulp.dest(path.dist.js)) 
@@ -81,8 +85,8 @@ gulp.task('scss:build', function () {
 	}) )
 	.on( 'error', console.error.bind( console ) )
 	.pipe( autoprefixer({ browsers: [ 'last 2 versions', '> 5%', 'Firefox ESR' ] }) )
-	.pipe( sourcemaps.write( mapURL ) )
 	.pipe(cleanCSS()) 
+	.pipe( sourcemaps.write( mapURL ) )
 	.pipe(gulp.dest(path.dist.scss)) 
 	.pipe(reload({stream: true}));
 });
