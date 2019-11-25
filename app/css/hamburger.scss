@@ -1,0 +1,44 @@
+.hamburger-wrap {
+	position: absolute;
+	z-index: 1000;
+	display: none;
+	top: 70px;
+	right: 5em;
+	.hamburger-item {
+		background-color: #fff;
+		width: 30px;
+		height: 3px;
+		transition: all 0ms 300ms;
+		&:before, &:after {
+			background-color: #fff;
+			width: 30px;
+			height: 3px;
+			content: '';
+			display: block;
+			position: absolute;
+		}
+		&:after {
+			bottom: -8px;
+			transition: transform 300ms cubic-bezier(.23,1,.32,1), bottom 300ms cubic-bezier(.23,1,.32,1) 300ms;
+		}
+		&:before {
+			top: -8px;
+			transition: transform 300ms cubic-bezier(.23,1,.32,1), top 300ms cubic-bezier(.23,1,.32,1) 300ms;
+		}
+	}
+	&.active {
+		.hamburger-item {
+			background: rgba(0, 0, 0, 0);
+			&:before {
+				transform: rotate(45deg);
+				top: 0px;
+				transition: transform 300ms 300ms cubic-bezier(.23,1,.32,1), top 300ms cubic-bezier(.23,1,.32,1);
+			}
+			&:after {
+				bottom: 0px;
+				transform: rotate(-45deg);
+				transition: transform 300ms 300ms cubic-bezier(.23,1,.32,1), bottom 300ms cubic-bezier(.23,1,.32,1);
+			}
+		}
+	}
+}

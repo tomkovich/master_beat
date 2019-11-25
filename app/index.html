@@ -9,10 +9,11 @@
 	<link href="https://fonts.googleapis.com/css?family=El+Messiri:400,700&display=swap&subset=cyrillic" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/tomkovich-icon.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/media.css">
 </head>
 <body>
-	<section class="section section-main">
-		
+	<section class="section-main">
+
 		<header>
 			<div class="flex-container">
 				<div class="logo">
@@ -37,7 +38,10 @@
 				<div class="add-menu flex-container">
 					<div class="add-menu_item">
 						<div class="add-menu_search">
-							<i class="tom-search tomkovich-icon"></i>
+							<form action="" autocomplete="off">
+								<input type="text" id="search" class="search" placeholder="Что искать?">
+								<input type="submit" value="s" id="search_submit"><i class="tom-search tomkovich-icon"></i>
+							</form>
 						</div>
 					</div>
 					<div class="add-menu_item">
@@ -55,6 +59,22 @@
 				</div>
 			</div>
 		</header>
+		
+		<div class="hamburger-wrap">
+			<div class="hamburger-item"></div>
+		</div>
+
+		<div class="menu mobile-menu">
+			<nav>
+				<ul>
+					<li><a href="#">Наушники</a></li>
+					<li><a href="#">Перформанс</a></li>
+					<li><a href="#">Компания</a></li>
+					<li><a href="#">Медия</a></li>
+					<li><a href="#">Поддержка</a></li>
+				</ul>
+			</nav>
+		</div>
 
 		<div class="section-main_slider">
 			<div class="section-main_slider__wrapper">
@@ -334,7 +354,7 @@
 						Наушники последнего поколения Master Beat F.
 					</div>
 					<div class="btn-buy main-button">
-						Купить
+						<a href="/single-product.html">Купить</a>
 					</div>
 				</div>
 
@@ -605,6 +625,8 @@
 					beatae eveniet illo labore!
 				</div>
 			</div>
+
+			
 			<div class="section-testimonials_link">
 				<a href="#" class="main-button">
 					Больше отзывов
@@ -702,7 +724,7 @@
 	</div>
 </section>
 
-<div class="section section-gallery">
+<div class="section-gallery">
 	<div class="flex-container">
 		<div class="section-gallery_photo bg section-gallery_main" style="background-image: url(img/big.jpg)">
 			
@@ -720,7 +742,7 @@
 			<div class="section-gallery_photo bg" style="background-image: url(img/3.jpg)">
 
 			</div>
-			<div class="section-gallery_photo bg" style="background-image: url(img/4.jpg)">
+			<div class="section-gallery_photo bg" style="background-image: url(img/2.jpg)">
 
 			</div>
 			<div class="section-gallery_photo bg" style="background-image: url(img/5.jpg)">
@@ -738,7 +760,7 @@
 			<div class="section-gallery_photo bg" style="background-image: url(img/m3.jpg)">
 
 			</div>
-			<div class="section-gallery_photo bg" style="background-image: url(img/main-bg.jpg)">
+			<div class="section-gallery_photo bg" style="background-image: url(img/m3.jpg)">
 
 			</div>
 			<div class="section-gallery_photo link-gallery">
@@ -828,21 +850,21 @@
 			</div>
 		</div>
 		<div class="footer-apps">
-				<div class="title-apps">
-					Слушайте нас в:
-				</div>
-				<a href="#" class="app-itunes">
-					<span class="app-title">iTunes </span>
-					<span class="tomkovich-icon tom-apple-logo"></span>
-				</a>
-				<a href="#" class="app-soundcloud">
-					<span class="app-title">SoundCloud</span>
-					<span class="tomkovich-icon tom-soundcloud-logo"></span>
-				</a>
+			<div class="title-apps">
+				Слушайте нас в:
+			</div>
+			<a href="#" class="app-itunes">
+				<span class="app-title">iTunes </span>
+				<span class="tomkovich-icon tom-apple-logo"></span>
+			</a>
+			<a href="#" class="app-soundcloud">
+				<span class="app-title">SoundCloud</span>
+				<span class="tomkovich-icon tom-soundcloud-logo"></span>
+			</a>
 		</div>
 		<div class="footer-subscribe">
 			<div class="title-subscribe">
-					Подпишись на рассылку:
+				Подпишись на рассылку:
 			</div>
 			<form action="">
 				<input type="text" name="email" placeholder="Ваш email" required>
@@ -851,6 +873,30 @@
 		</div>
 	</div>
 </footer>
+
+<div class="popup-login">
+	<div class="popup-login_title">
+		Регистрация 
+	</div>
+	<form action="" id="formLogin">
+		<div class="form-group">
+			<input type="text" name="name" placeholder="Ваше имя">
+		</div>
+		<div class="form-group">
+			<input type="email" name="email" placeholder="Ваш email">
+		</div>
+		<div class="form-group">
+			<input type="password" name="password" placeholder="Ваш пароль">
+		</div>
+		<div class="form-group">
+			<input type="submit" value="Отправить">
+		</div>
+	</form>
+	<a href="#" class="logIn">Я уже зарегистрирован</a>
+	<div class="close">x</div>
+</div>
+
+<div class="overlay"></div>
 
 <script src="js/tom.slider.js"></script>
 <script src="js/main.js"></script>
