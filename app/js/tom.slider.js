@@ -8,13 +8,10 @@ let tomSlider = function(settings) {
 		innerArrowNext: '>',
 		innerArrowPrev: '<',
 		slidesShow: 1,
-<<<<<<< HEAD
 		autoplay: false,
 		autoHeight: false,
-		response: {}
-=======
+		response: {},
 		autoplay: false
->>>>>>> 65e7b882d26ea7fb3660e20ea0f26d3617d8e588
 	}
 
 	if(settings === undefined) {
@@ -29,13 +26,10 @@ let tomSlider = function(settings) {
 		innerArrowNext: settings.innerArrowNext || '>',
 		innerArrowPrev: settings.innerArrowPrev || '<',
 		slidesShow: settings.slidesShow || 1,
-<<<<<<< HEAD
 		autoplay: settings.autoplay,
 		autoHeight: settings.autoHeight,
-		response: settings.response
-=======
+		response: settings.response,
 		autoplay: settings.autoplay
->>>>>>> 65e7b882d26ea7fb3660e20ea0f26d3617d8e588
 	}
 
 	let nextSlideButton = settings.arrowNext;
@@ -51,8 +45,6 @@ let tomSlider = function(settings) {
 		prevSlideButton.innerHTML = settings.innerArrowPrev;
 
 		let selector = document.querySelector(settings.selector);
-		
-<<<<<<< HEAD
 		if(settings.response) {
 			let responseWidth = [];
 
@@ -70,8 +62,6 @@ let tomSlider = function(settings) {
 		if(sliderLength < settings.slidesShow) {
 			return console.log('There are too many slides in options');
 		} 
-=======
->>>>>>> 65e7b882d26ea7fb3660e20ea0f26d3617d8e588
 
 		let slideWidth = (100 / settings.slidesShow) - marginNumber + '%';
 
@@ -118,13 +108,10 @@ let tomSlider = function(settings) {
 			selector.style.height = `${arr[0] * 1.3}px`
 		}
 
-<<<<<<< HEAD
 		if(settings.autoHeight) {
 			autoHeight();
 		}
-=======
 		autoHeight();
->>>>>>> 65e7b882d26ea7fb3660e20ea0f26d3617d8e588
 
 		let slideNext = () => {
 
@@ -201,9 +188,5 @@ let tomSlider = function(settings) {
 	} 
 
 	return _carousel();
-<<<<<<< HEAD
-}
-=======
 }
 
->>>>>>> 65e7b882d26ea7fb3660e20ea0f26d3617d8e588

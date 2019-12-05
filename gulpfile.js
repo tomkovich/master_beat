@@ -70,7 +70,6 @@ gulp.task('js:build', function () {
 	.pipe(babel({
 		presets: ['@babel/env']
 	})) 
-	.pipe(uglify()) 
 	.pipe(sourcemaps.write()) 
 	.pipe(gulp.dest(path.dist.js)) 
 	.pipe(reload({stream: true})); 
@@ -79,10 +78,7 @@ gulp.task('js:build', function () {
 gulp.task('scss:build', function () {
 	return gulp.src(path.app.scss) 
 	.pipe(sourcemaps.init()) 
-	.pipe( sass({
-		errLogToConsole: true,
-		outputStyle: 'compressed'
-	}) )
+	.pipe( sass())
 	.on( 'error', console.error.bind( console ) )
 	.pipe( autoprefixer({ browsers: [ 'last 2 versions', '> 5%', 'Firefox ESR' ] }) )
 	.pipe(cleanCSS()) 

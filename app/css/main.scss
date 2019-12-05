@@ -1,11 +1,7 @@
 @import 'colors.scss';
 @import 'fonts.scss';
 @import 'tom.slider.scss';
-<<<<<<< HEAD
 @import 'hamburger.scss';
-=======
->>>>>>> 65e7b882d26ea7fb3660e20ea0f26d3617d8e588
-
 body {
 	padding: 0;
 	margin: 0;
@@ -553,15 +549,12 @@ li {
 				cursor: pointer;
 				margin-top: auto;
 				trasition: background .25s ease-in-out;
-<<<<<<< HEAD
 				a {
 					display: block;
 					width: 100%;
 					height: 100%;
 					color: #fff;
 				}
-=======
->>>>>>> 65e7b882d26ea7fb3660e20ea0f26d3617d8e588
 				&:hover {
 					background: darken($blue, 5%);
 				}
@@ -893,7 +886,6 @@ footer {
 			}
 		}
 	}
-<<<<<<< HEAD
 }
 
 /* Form Search */
@@ -1409,6 +1401,4 @@ footer {
 			}
 		}
 	}
-=======
->>>>>>> 65e7b882d26ea7fb3660e20ea0f26d3617d8e588
 }
