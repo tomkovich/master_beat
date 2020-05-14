@@ -81,7 +81,6 @@ gulp.task('scss:build', function () {
 	.pipe( sass())
 	.on( 'error', console.error.bind( console ) )
 	.pipe( autoprefixer({ browsers: [ 'last 2 versions', '> 5%', 'Firefox ESR' ] }) )
-	.pipe(cleanCSS()) 
 	.pipe( sourcemaps.write( mapURL ) )
 	.pipe(gulp.dest(path.dist.scss)) 
 	.pipe(reload({stream: true}));

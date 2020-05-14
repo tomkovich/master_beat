@@ -54,7 +54,6 @@ if(slider) {
 }
 
 let points = document.querySelectorAll('.section-review_image .point');
-let title = document.querySelector('.section-review_content .title').textContent;
 
 
 points.forEach( point => {
